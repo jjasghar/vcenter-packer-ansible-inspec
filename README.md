@@ -7,11 +7,11 @@ This repo is the core example pipeline bringing vCenter, `packer`,
 
 ## Process
 
-TODO: Fill this out
-
-## Diagram
-
-TODO: Add diagram of the pipeline
+1) Create a beginning (seed) template. Name it something that is obvious as your "golden" image. I like `debian10-gold` personally.
+2) Run the Pipeline to verify that it can build the `master` branch.
+3) Create a PR with some changes to the [debian10/playbook.yml](debian10/playbook.yml) and see if your "PR" template is created.
+4) Merge the PR into master and see that your seed template is now your changed version.
+5) Continue iterating on the `playbook.yml` and you now have a trackable artifact of changes to your templates.
 
 ## Usage
 
